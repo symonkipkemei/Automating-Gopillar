@@ -25,91 +25,58 @@ Projects are divided into the following categories according to type and size:
 
 The most common projects done are Apartments and houses
 
+## parameters
 
-## Parameters
+1. project ID no
+2. project name
+3. project category
+4. Project deliverables
+5. project spaces
 
-Within Gopillar, there exists a repository of several projects with different interventions by different designers
-The secret is to leverage on time and resources to complete one project.This will allow for time for exploration of 
-several projects and thus increasing the probabilities of winning a several project.
+## Project Categories
+There are a few categories we are going to specialise with. 
+They are:
+1. Apartment-Small
+2. Single room-Small
+3. Single room-Medium
+4. Single room-Large
+5. Living Sleeping area-Small
+6. Living Sleeping area-Medium
 
-The strategy aims at specialising on apartment small size because they bear a lot in similar. These are:
-1. Layout options
-2. Furniture options 
-3. Finishes and furniture lists
-
-Overtime, the strategy aims to expand to cover other scope sizes, from small, medium to large.
-
-## procedure
-
-1. The model of work is to optimize on BIM modelling.
-2. Sketchup model + Revit Model + Autocad Models
-
-
-Model the space in revit and basic furniture.
-
-1.We are going to split the kind of furniture we are going to download from revit and sketchup
-2.It would have been better if it was done in one  project such as revit but the quality of revit models is wanting.
+The rate of completion of small project within a
+small time will be high. Thus increased probabilities of 
+wining these projects.
 
 
-## spatial resolution
-
-### Tools
-1.Revit
-
-### Comprises 
-1.Walls
-2.Fenestration
-2.CAD blocks
-3.Ceiling design
-
-### Outcome
-1.Floor plan
-2.Demolition plan
-3.Wiring Plan
-4.Lighting plan
-
-The advantage is that this can be completely automated
-1. Walls can be automated
-2. Fenestration can be automated
-3. Cad-blocks can be created, added, transformed and adjusted and repeated
-4. Ceiling and lighting plans can be automated
-
-THE BIGGER THE REVIT DATABASE, THE EASIER THE SPATIAL RESOLUTION
+## Project Deliverables are 
+1. Floor Plan (FP)
+2. Demolition and reconstruction plans (DRP)
+3. Render views (RV)
+4. Furniture lists ( FL)
+5. Lighting plan (LP)
+6. Finishes list (FL)
+7. Wiring plan (WP)
+8. Flooring materials lists(FML)
 
 
-
-## Furniture , lighting & furnishing
-
-NOTE:SPATIAL ADJUSTMENTS CAN ONLY MADE AT SPATIAL RESOLUTION ,NOTHING SHOULD BE ADJUSTED
-
-### Tools
-1. Sketchup-It has the highest number of furniture components
-   
-2. Import walls, fenestration and other parts in dwg format, import into sketchup 
-comprises
-
-### comprises
-Furniture and lighting fixtures must be consistent with where they can be sourced
-This makes it easier to create furniture list
-leverage on BIM archiproducts
-#### Furniture
-1.Living room
-2.Kitchen
-3.Dining
-4.Bedroom
-5.Washroom
-
-#### Furnishing
-These are the most repetitive aspect of furnishing,They add flair to the design and do not need
-much.
-Borrow elements designed by other designers.
-An indepth research on sketchup can yield high end furnishing
-
-1.Living room-pillows,curtains,
-2.Kitchen
-3.Dining
-4.Bedroom
-5.Washroom
+## Project Spaces
+1.Living-Dining-Kitchen(open)
+2.Living-Dining
+3.Living only
+4.Kitchen
+5.Pantry
+6.Cloak 
+7.Single
+8.bedroom 1
+9.bedroom 2
+10.Master-walk-in
+11.Master-open-closet
+12.Store
+13.Garage
+14.Terrace
 
 
-#### rendering
+## Storing to a csv file/sql database
+We are done with the go getter functions,whose main role was to get the
+parameters of the values we were going to use.
+The next item is to recieve the data and store ina csv file
