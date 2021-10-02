@@ -8,6 +8,8 @@ it with little or no adjustment.The plan is to steal it all."""
 def projectID():
     """The unique identifier of each project.
     Used to retrieve the project information from Gopillar website """
+
+    # It is easier to co
     projectID = int(input("Insert the project 1D: "))
     return projectID
 
@@ -165,7 +167,3 @@ def projectSpaces():
             print("wrong input,Try again")
 
     return spacesList
-
-
-answer = projectSpaces()
-print(answer)

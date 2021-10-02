@@ -79,4 +79,4 @@ wining these projects.
 ## Storing to a csv file/sql database
 We are done with the go getter functions,whose main role was to get the
 parameters of the values we were going to use.
-The next item is to recieve the data and store ina csv file
+The next item is to receive the data and store in a csv file
