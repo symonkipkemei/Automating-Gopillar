@@ -3,20 +3,22 @@ design data and look which option is close to or similar to a new clients requir
 it with little or no adjustment.The plan is to steal it all."""
 
 
-
-
 def projectID():
     """The unique identifier of each project.
     Used to retrieve the project information from Gopillar website """
 
-    # It is easier to co
-    projectID = int(input("Insert the project 1D: "))
-    return projectID
+    # It is easier to copy the link rather than copy the ID
+    projectLink = input("Insert the project link: ")
+    projectIdentificationNo = projectLink[34:58]
+    info = (projectLink, projectIdentificationNo)
+    return info
+
 
 def projectName():
     """Records the name of the project"""
     projectName = input("Insert project name: ")
     return projectName
+
 
 def projectCategory():
     """The type of project based on size and the number of rooms"""
@@ -48,11 +50,11 @@ def projectCategory():
 
 def projectDeliverables():
     """The expected outcomes set by the client of the expected submissions and their type"""
-    #storage for values selected by user
+    # storage for values selected by user
     deliverableList = []
 
-    #recording one by one until all the parameters are captured
-    correct  = False
+    # recording one by one until all the parameters are captured
+    correct = False
     while correct == False:
         print("\nChoose Avalable project Deliverables \n"
               "(1)Floor Plan (FP)\n"
@@ -74,15 +76,16 @@ def projectDeliverables():
         userInput = int(input("Enter one of the options above: "))
 
         # Within the specified range of keys
-        if userInput <= 8  and userInput >= 1:
-            #checking if the value in the dictionary is already stored in the list
+        if userInput <= 8 and userInput >= 1:
+            # checking if the value in the dictionary is already stored in the list
             # if not add,otherwise warn of repetition
             if deliverableDict[userInput] not in deliverableList:
                 deliverableList.append(deliverableDict[userInput])
                 print(f"Added {deliverableDict[userInput]}")
                 print(deliverableList)
                 correct = False
-            else:print("Already added, try another one:")
+            else:
+                print("Already added, try another one:")
 
         # The gunshot
         # This ends the continuous loop
@@ -139,7 +142,7 @@ def projectSpaces():
                       11: "Master-open-closet",
                       12: "Store",
                       13: "Garage",
-                      14: "Terrace",}
+                      14: "Terrace", }
 
         # The selected key
         userInput = int(input("Enter one of the options above: "))
