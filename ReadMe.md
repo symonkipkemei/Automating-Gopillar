@@ -40,7 +40,7 @@ They are:
 6. Living Sleeping area-Medium
 
 The rate of completion of small project within a
-small time will be high. Thus increased probabilities of 
+small-time will be high. Thus increased probabilities of 
 wining these projects.
 
 
@@ -56,23 +56,23 @@ wining these projects.
 
 
 ## Project Spaces
-1.Living-Dining-Kitchen(open)
-2.Living-Dining
-3.Living only
-4.Kitchen
-5.Pantry
-6.Cloak 
-7.Single
-8.bedroom 1
-9.bedroom 2
-10.Master-walk-in
-11.Master-open-closet
-12.Store
-13.Garage
-14.Terrace
+1. Living-Dining-Kitchen(open)
+2. Living-Dining
+3. Living only
+4. Kitchen
+5. Pantry
+6. Cloak 
+7. Single
+8. bedroom 1
+9. bedroom 2
+10. Master-walk-in
+11. Master-open-closet
+12. Store
+13. Garage
+14. Terrace
 
 
 ## Storing the best entry options into a sql database
 We are done with the go getter functions,whose main role was to get the
 parameters of the values we were going to use.
-The next item is to receive the data and store in a csv file
+The next item is to receive the data and store in a sql database.
