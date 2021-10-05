@@ -5,10 +5,6 @@
 1. My skill in architecture, design, visualisation and 3d modelling accrued over a span of 6 years
 2. My programming skills accrued over a span of 1 year
 3. Existing renovation projects amounting to 20 projects 
-4. Completed university, does not want to get into mainstream architecture. I want to join the programming world
-   but broke at the same time and therefore wants to leverage on the skills learnt to win Gopillar projects. 
-   At the same time, I want to continue learning python programming with dataflair
-   
 
 
 ## Go_Pillar in summary
@@ -76,7 +72,7 @@ wining these projects.
 14.Terrace
 
 
-## Storing to a csv file/sql database
+## Storing the best entry options into a sql database
 We are done with the go getter functions,whose main role was to get the
 parameters of the values we were going to use.
 The next item is to receive the data and store in a csv file

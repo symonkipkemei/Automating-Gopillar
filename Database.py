@@ -69,40 +69,34 @@ def insertIntoProjectsTable():
 def insertIntoDeliverablesTable(Id):
     """Insert items into the Gopillar database, deliverables table.
     This portion is automated as we had already determined the outcomes"""
+    valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL, valueWP, valueFMP = (0, 0, 0, 0, 0, 0, 0, 0)
 
     deliverablesList = subPrograms.projectDeliverables()
 
     if "FP" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,FloorPlan) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueFP = 1
     elif "DRP" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,DemolitionPlan) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueDRP = 1
     elif "RV" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,RenderViews) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueRV = 1
     elif "FUL" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,FurnitureList) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueFUL = 1
     elif "LP" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,LightingPlan) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueLP = 1
     elif "FIL" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,FinishesList) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueFIL = 1
     elif "WP" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,WiringPlan) 
-            VALUES(?,?) """, (Id, 1))
-
+        valueWP = 1
     elif "FML" in deliverablesList:
-        cursor.execute(""" INSERT INTO Deliverables(ID,FloorMaterials) 
-            VALUES(?,?) """, (Id, 1))
+        valueWP = 1
+    else:
+        print("Not within the Database")
+
+    cursor.execute(""" INSERT INTO Deliverables
+    (ID,FloorPlan,DemolitionPlan,
+    RenderViews,FurnitureList,LightingPlan,
+    FinishesList,WiringPlan,FloorMaterials) 
+    VALUES(?,?,?,?,?,?,?,?,?) """, (Id, valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL, valueWP, valueFMP))
 
     db.commit()
     db.close()
