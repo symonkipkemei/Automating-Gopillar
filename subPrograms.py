@@ -9,6 +9,7 @@ def projectID():
 
     # It is easier to copy the link rather than copy the ID
     projectLink = input("Insert the project link: ")
+    # displaying part of the string (ID) using the slicing operator
     projectIdentificationNo = projectLink[34:58]
     info = (projectLink, projectIdentificationNo)
     return info
@@ -67,8 +68,9 @@ def projectDeliverables():
               "(8)Flooring materials lists(FML)\n"
               "(9)END\n")
 
-        # Use of known keys to make refrence to the long and dynamic values
+        # Use of known keys to make reference to the long and dynamic values
         # Makes it shorter for the user to type
+        # Increased accuracy levels
 
         deliverableDict = {1: "FP", 2: "DRP", 3: "RV", 4: "FUL", 5: "LP", 6: "FIL", 7: "WP", 8: "FML"}
 
@@ -109,46 +111,55 @@ def projectSpaces():
     # recording spaces one by one until all  are captured
     correct = False
     while correct == False:
-        print("\nChoose Avalable project Spaces \n"
-              "1.Living-Dining-Kitchen(open)\n"
-              "2.Living-Dining\n"
-              "3.Living only\n"
-              "4.Kitchen\n"
-              "5.Pantry\n"
-              "6.Cloak\n"
-              "7.Single\n"
-              "8.bedroom 1\n"
-              "9.bedroom 2\n"
-              "10.Master-walk-in\n"
-              "11.Master-open-closet\n"
-              "12.Store\n"
-              "13.Garage\n"
-              "14.Terrace\n"
-              "15.END\n")
+        print("""
+        \nChoose Available project Spaces below:
+        1: "Living-Dining-Kitchen(open)",
+        2: "Living-Dining",
+        3: "Living-Only",
+        4: "Kitchen-Only",
+        5: "Kitchen-Dining",
+        6: "kitchen-Pantry",
+        7: "Cloak-room",
+        8: "Laundry-room",
+        9: "Bedroom",
+        10: "Master-walk-in-closet",
+        11: "Master-space-closet",
+        12: "Master-en-suite",
+        13: "Master-space",
+        14: "Home-office",
+        15: "Store",
+        16: "Garage",
+        17: "Terrace"
+        18: **END**
+        """)
+
 
         # Use of known keys to make reference to the long and dynamic spaces
         # The goal is to make it easier for the user to type.
 
-        spacesDict = {1: "Living-Dining-Kitchen(open)",
+        spacesDict = {1: "Living-Dining-Kitchen",
                       2: "Living-Dining",
-                      3: "Living only",
-                      4: "Kitchen",
-                      5: "Pantry",
-                      6: "Cloak",
-                      7: "Singleroom",
-                      8: "bedroom 1",
-                      9: "bedroom 2",
-                      10: "Master-walk-in",
-                      11: "Master-open-closet",
-                      12: "Store",
-                      13: "Garage",
-                      14: "Terrace", }
+                      3: "Living-Only",
+                      4: "Kitchen-Only",
+                      5: "Kitchen-Dining",
+                      6: "kitchen-Pantry",
+                      7: "Cloakroom",
+                      8: "Laundry-room",
+                      9: "Bedroom",
+                      10: "Master-walk-in-closet",
+                      11: "Master-space-closet",
+                      12: "Master-en-suite",
+                      13: "Master-space",
+                      14: "Home-office",
+                      15: "Store",
+                      16: "Garage",
+                      17: "Terrace" }
 
         # The selected key
         userInput = int(input("Enter one of the options above: "))
 
         # Within the specified range of keys
-        if userInput <= 14 and userInput >= 1:
+        if userInput <= 17 and userInput >= 1:
             # checking if the value in the space dictionary is already stored in the list
             # if not add,otherwise warn of repetition
             if spacesDict[userInput] not in spacesList:
@@ -156,17 +167,27 @@ def projectSpaces():
                 print(f"Added {spacesDict[userInput]}")
                 print(spacesList)
                 correct = False
+
             else:
                 print("Already added, try another one:")
 
         # The gunshot
         # This ends the continuous loop
 
-        elif userInput == 15:
+        elif userInput == 18:
             correct = True
 
         # Wrong inputs are not tolerated
         else:
             print("wrong input,Try again")
 
-    return spacesList
+    # After determining  the spatial elements in our project
+    # we can now determine the no of repetitive spaces such as bedrooms.
+
+    noOfBedrooms = None
+    if "Bedroom" in spacesList:
+        noOfBedrooms = int(input("How many bedrooms are there?: "))
+
+    items = (spacesList, noOfBedrooms)
+
+    return items

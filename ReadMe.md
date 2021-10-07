@@ -1,11 +1,22 @@
-# The process
 
+## readMe
+The Automating Go-pillar is a command line interface programme, A programme that collects existing data on spatial 
+configurations of apartments and curates it into instant design solutions. The intention is to shorten the design
+decision-making process into milliseconds.
+
+
+## The concept
+There is a high probability that architectural problems, perception and trends amongst clients on how to modify their 
+spaces is similar. This is further supported by the fact the societies tend to influence one another.
+The only variation is the spatial constraints, structural walls, that delimits the client's already built habitable space.
+
+The code below intends to filter amongst proposed human habitations and fit the already existing solutions into new
+client's spaces. Little or no modification will be required of the spatial constraints.
 
 ## Opportunity
-1. My skill in architecture, design, visualisation and 3d modelling accrued over a span of 6 years
-2. My programming skills accrued over a span of 1 year
-3. Existing renovation projects amounting to 20 projects 
-
+Every single day, the world gives birth to clients in need of renovation,re-imagination and re-invention of their
+habitation.Little do they now that the solutions they are looking for is out there scattered amongst the vast fields 
+of the internet.
 
 ## Go_Pillar in summary
 
@@ -19,15 +30,8 @@ Projects are divided into the following categories according to type and size:
 5. Garden - Large, Medium, Small
 
 
-The most common projects done are Apartments and houses
-
-## parameters
-
-1. project ID no
-2. project name
-3. project category
-4. Project deliverables
-5. project spaces
+The programme above intends to specialise on spaces already delimited by structural-walls
+thus controlled outcomes ar expected.
 
 ## Project Categories
 There are a few categories we are going to specialise with. 
@@ -43,8 +47,16 @@ The rate of completion of small project within a
 small-time will be high. Thus increased probabilities of 
 wining these projects.
 
+## parameters
 
-## Project Deliverables are 
+1. project ID no
+2. project name
+3. project category
+4. Project deliverables
+5. project spaces
+
+
+## Project Deliverables 
 1. Floor Plan (FP)
 2. Demolition and reconstruction plans (DRP)
 3. Render views (RV)
@@ -56,23 +68,47 @@ wining these projects.
 
 
 ## Project Spaces
-1. Living-Dining-Kitchen(open)
+1. Living-Dining-Kitchen
 2. Living-Dining
-3. Living only
-4. Kitchen
-5. Pantry
-6. Cloak 
-7. Single
-8. bedroom 1
-9. bedroom 2
-10. Master-walk-in
-11. Master-open-closet
-12. Store
-13. Garage
-14. Terrace
+3. Living-Only
+4. Kitchen-Only
+5. Kitchen-Dining
+6. kitchen-Pantry
+7. Cloakroom
+8. Laundry-room
+9. Bedroom
+10. Master-walk-in-closet
+11. Master-space-closet
+12. Master-en-suite
+13. Master-space
+14. Home-office
+15. Store
+16. Garage
+17. Terrace
 
 
-## Storing the best entry options into a sql database
-We are done with the go getter functions,whose main role was to get the
-parameters of the values we were going to use.
-The next item is to receive the data and store in a sql database.
+## Curating the best solutions
+
+The programme handpicks the best submission made per every project and
+records the spaces proposed by the designer.The assumption is that, this the best 
+representation of the clients needs at that point and time.
+
+
+## The predictable clients needs
+
+When a new client submits a design problem, the programme filters through :
+1. The existing layout of the building 
+2. The clients brief and documents spatial requirements by the client
+
+
+## Feeding the Chief architect
+The client's spatial requirements documented above are then fed into the algorithm, 
+which in turn returns all the best entry options that match the clients needs.
+
+## Adjusting the delimiting constraints
+1. Adjusting of the spatial constraints in order to generate a new floor plan
+2. The same renders are re-entered as a submission requirement alongside demolition plans,
+   furniture and lighting plans.
+
+
+# ARCHITECTS WITHOUT ARCHITECTS
