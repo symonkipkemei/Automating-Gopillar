@@ -110,6 +110,13 @@ which in turn returns all the best entry options that match the clients needs.
    furniture and lighting plans.
    
 
-
-
+   
  As a result , ARCHITECTURE WITHOUT ARCHITECTS is born.
+ 
+## Future updates
+
+1. Color scheme, light scheme and ceiling plan to be added to the deliverable table
+2. Add table for unique aspects about the project, it will be easier to pin-point them later
+3. A section of abstracted clients requirements will be desirable.-Look for keywords that are likely
+   to capture the clients desired outcome.
+4. Change the bedroom outcome from NULL to 0
