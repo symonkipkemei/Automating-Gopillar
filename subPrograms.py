@@ -57,7 +57,7 @@ def projectDeliverables():
     # recording one by one until all the parameters are captured
     correct = False
     while correct == False:
-        print("\nChoose Avalable project Deliverables \n"
+        print("\nChoose Available project Deliverables \n"
               "(1)Floor Plan (FP)\n"
               "(2)Demolition and reconstruction plans (DRP)\n"
               "(3)Render views (RV)\n"
@@ -66,19 +66,23 @@ def projectDeliverables():
               "(6)Finishes list (FIL)\n"
               "(7)Wiring plan (WP)\n"
               "(8)Flooring materials lists(FML)\n"
-              "(9)END\n")
+              "(9)Color scheme(C0S)\n"
+              "(10)Light scheme(LIS)\n"
+              "(11)Ceiling plan(CEP)\n"
+              "(12)END\n")
 
         # Use of known keys to make reference to the long and dynamic values
         # Makes it shorter for the user to type
         # Increased accuracy levels
 
-        deliverableDict = {1: "FP", 2: "DRP", 3: "RV", 4: "FUL", 5: "LP", 6: "FIL", 7: "WP", 8: "FML"}
+        deliverableDict = {1: "FP", 2: "DRP", 3: "RV", 4: "FUL", 5: "LP", 6: "FIL", 7: "WP", 8: "FML", 9: "COS",
+                           10: "LIS", 11: "CEP"}
 
         # The selected key
         userInput = int(input("Enter one of the options above: "))
 
         # Within the specified range of keys
-        if userInput <= 8 and userInput >= 1:
+        if userInput <= 11 and userInput >= 1:
             # checking if the value in the dictionary is already stored in the list
             # if not add,otherwise warn of repetition
             if deliverableDict[userInput] not in deliverableList:
@@ -92,7 +96,7 @@ def projectDeliverables():
         # The gunshot
         # This ends the continuous loop
 
-        elif userInput == 9:
+        elif userInput == 12:
             correct = True
 
         # Wrong inputs are not tolerated
@@ -133,7 +137,6 @@ def projectSpaces():
         18: **END**
         """)
 
-
         # Use of known keys to make reference to the long and dynamic spaces
         # The goal is to make it easier for the user to type.
 
@@ -153,7 +156,7 @@ def projectSpaces():
                       14: "Home-office",
                       15: "Store",
                       16: "Garage",
-                      17: "Terrace" }
+                      17: "Terrace"}
 
         # The selected key
         userInput = int(input("Enter one of the options above: "))
@@ -187,7 +190,35 @@ def projectSpaces():
     noOfBedrooms = None
     if "Bedroom" in spacesList:
         noOfBedrooms = int(input("How many bedrooms are there?: "))
+    else:
+        noOfBedrooms = 0
 
     items = (spacesList, noOfBedrooms)
 
     return items
+
+
+# create a program that picks the attributes parameters
+
+def projectAttributes():
+    description = None
+    correct = False
+    while not correct:
+        print("Describe this project in your own words\n"
+              "(1)My description"
+              "(2)None")
+        userInput = int(input("Option: "))
+
+        if userInput == 1:
+            description = input("tell me: ")
+            correct = False
+
+        elif userInput == 2:
+            correct = True
+
+        else:
+            print("Wrong Input,try again.")
+            correct = False
+
+    return description
+

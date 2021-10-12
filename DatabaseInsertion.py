@@ -6,59 +6,6 @@ with sqlite3.connect("Gopillar.db") as db:
     cursor = db.cursor()
 
 
-def createTables():
-    """ Creates three  tables ;
-    1. The deliverable table,
-    2. The spaces table
-    3. The project table
-    """
-    # create a projects table
-    cursor.execute("""CREATE TABLE IF NOT EXISTS projects(
-    ID text PRIMARY KEY,
-    Title text NOT NULL,
-    Category text NOT NULL 
-    )""")
-
-    # create a deliverables table
-    cursor.execute("""CREATE TABLE IF NOT EXISTS Deliverables(
-    ID text PRIMARY KEY,
-    FloorPlan integer,
-    DemolitionPlan integer,
-    RenderViews integer,
-    FurnitureList integer,
-    LightingPlan integer,
-    FinishesList integer,
-    WiringPlan integer,
-    FloorMaterials integer
-    )""")
-    # you do not need comma after the last column item
-
-    # create a spaces table
-    cursor.execute("""CREATE TABLE IF NOT EXISTS Spaces(
-        ID text PRIMARY KEY,
-        LivingDiningKitchen integer,
-        LivingDining integer,
-        LivingOnly integer,
-        KitchenOnly integer,
-        KitchenDining integer,
-        kitchenPantry integer,
-        Cloakroom integer,
-        LaundryRoom integer,
-        Bedroom integer,
-        MasterWalkInCloset integer,
-        MasterSpaceCloset integer,
-        MasterEnSuite integer,
-        MasterSpace integer,
-        HomeOffice integer,
-        Store integer,
-        Garage integer,
-        Terrace integer )""")
-    # you do not need comma after the last column item
-
-    db.commit()
-    db.close()
-
-
 def insertIntoProjectsTable():
     """Insert items into the Gopillar database, projects table"""
     link, Id = subPrograms.projectID()
@@ -76,7 +23,8 @@ def insertIntoProjectsTable():
 def insertIntoDeliverablesTable(Id):
     """Insert items into the Gopillar database, deliverables table.
     This portion is automated as we had already determined the outcomes"""
-    valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL, valueWP, valueFML = (0, 0, 0, 0, 0, 0, 0, 0)
+    valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL, valueWP, valueFML, valueCOS, valueLIS, valueCEP = \
+        (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
     deliverablesList = subPrograms.projectDeliverables()
 
@@ -97,14 +45,21 @@ def insertIntoDeliverablesTable(Id):
             valueWP = valueWP + 1
         elif x == "FML":
             valueFML = valueFML + 1
+        elif x == "COS":
+            valueFML = valueFML + 1
+        elif x == "LIS":
+            valueFML = valueFML + 1
+        elif x == "CEP":
+            valueFML = valueFML + 1
         else:
             print("Not within the Database")
 
     cursor.execute(""" INSERT INTO Deliverables
     (ID,FloorPlan,DemolitionPlan,
     RenderViews,FurnitureList,LightingPlan,
-    FinishesList,WiringPlan,FloorMaterials) 
-    VALUES(?,?,?,?,?,?,?,?,?) """, (Id, valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL, valueWP, valueFML))
+    FinishesList,WiringPlan,FloorMaterials,ColorScheme,LightScheme,CeilingPlan) 
+    VALUES(?,?,?,?,?,?,?,?,?,?,?,?) """, (Id, valueFP, valueDRP, valueRV, valueFUL, valueLP, valueFIL,
+                                    valueWP, valueFML, valueCOS, valueLIS, valueCEP))
     db.commit()
 
 
@@ -184,3 +139,11 @@ def insertIntoSpacesTable(Id):
 
     db.commit()
 
+
+def insertIntoAttributesTable(Id):
+    """Insert the description of the project """
+    description = subPrograms.projectAttributes()
+
+    cursor.execute(""" INSERT INTO Attributes(ID,Attributes) 
+        VALUES(?,?) """, (Id, description))
+    db.commit()

@@ -1,11 +1,14 @@
 import sqlite3
 
-import Database
+import DatabaseInsertion
 
 # welcome message
-print("Hello! This AUTOMATING GO-PILLAR!\n"
-      "We will be storing updating the sql database with Go-pillar projects \n"
-      "and analyze later."
+print("^^^^^^^^^^^^^^^^^^^^^^^^^AUTOMATING GO-PILLAR^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+      "Hello!\n"
+      "I am an algorithm that collects existing design data on spatial configurations of\n"
+      "apartments and curates it into instant design solutions based on the spatial\n"
+      "parameters given. The intention is to shorten the design decision-making process\n"
+      "into milliseconds.\n"
       "Please insert information as requested.\n")
 
 
@@ -24,12 +27,15 @@ def main():
 
         if userInput == 1:
             try:
-                Id = Database.insertIntoProjectsTable()
+                Id = DatabaseInsertion.insertIntoProjectsTable()
                 print("Project information stored")
-                Database.insertIntoDeliverablesTable(Id)
+                DatabaseInsertion.insertIntoDeliverablesTable(Id)
                 print("Project deliverables stored")
-                Database.insertIntoSpacesTable(Id)
+                DatabaseInsertion.insertIntoSpacesTable(Id)
                 print("Spaces stored")
+                DatabaseInsertion.insertIntoAttributesTable(Id)
+                print("Your description has been stored")
+
             except sqlite3.IntegrityError:
                 print("Project Already recorded in the database.")
             correct = False
