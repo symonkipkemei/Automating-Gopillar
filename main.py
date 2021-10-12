@@ -3,16 +3,17 @@ import sqlite3
 import DatabaseInsertion
 
 # welcome message
-print("^^^^^^^^^^^^^^^^^^^^^^^^^AUTOMATING GO-PILLAR^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
-      "Hello!\n"
+print("\n^^^^^^^^^^^^^^^^^^^^^^^^^AUTOMATING GO-PILLAR^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+      "\nHello!\n"
       "I am an algorithm that collects existing design data on spatial configurations of\n"
       "apartments and curates it into instant design solutions based on the spatial\n"
       "parameters given. The intention is to shorten the design decision-making process\n"
-      "into milliseconds.\n"
+      "into milliseconds.\n\n"
       "Please insert information as requested.\n")
 
 
-#
+# Running the main programme
+
 def main():
     """main programme running"""
 
