@@ -65,7 +65,12 @@ wining these projects.
 6. Finishes list (FL)
 7. Wiring plan (WP)
 8. Flooring materials lists(FML)
+9. Color scheme
+10. Light Scheme
+11. Ceiling Plan
 
+
+   
 ## Project Spaces
 1. Living-Dining-Kitchen
 2. Living-Dining
@@ -84,6 +89,13 @@ wining these projects.
 15. Store
 16. Garage
 17. Terrace
+
+
+## Project Attributes
+
+Design being an art, this parameter picks the unique aspects of the project as per the users'
+perception. This makes it easier to pin-point later.
+
 
 ## Curating the best solutions
 
@@ -115,8 +127,5 @@ which in turn returns all the best entry options that match the clients needs.
  
 ## Future updates
 
-1. Color scheme, light scheme and ceiling plan to be added to the deliverable table
-2. Add table for unique aspects about the project, it will be easier to pin-point them later
-3. A section of abstracted clients requirements will be desirable.-Look for keywords that are likely
+1. A section of abstracted clients requirements will be desirable.-Look for keywords that are likely
    to capture the clients desired outcome.
-4. Change the bedroom outcome from NULL to 0
