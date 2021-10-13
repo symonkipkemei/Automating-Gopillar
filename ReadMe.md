@@ -129,3 +129,5 @@ which in turn returns all the best entry options that match the clients needs.
 
 1. A section of abstracted clients requirements will be desirable.-Look for keywords that are likely
    to capture the clients desired outcome.
+2. When you insert the project ID,it should tell you automatically if the project is in the database or not.
+
