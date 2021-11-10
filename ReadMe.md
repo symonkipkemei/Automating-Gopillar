@@ -125,9 +125,30 @@ which in turn returns all the best entry options that match the clients needs.
    
  As a result , ARCHITECTURE WITHOUT ARCHITECTS is born.
  
+
+
+#THE STRUCTURE
+The database begins from page 18 onward ,the goal is to complete each one every single day
+
+211102-Folder 18
+
+
 ## Future updates
 
 1. A section of abstracted clients requirements will be desirable.-Look for keywords that are likely
    to capture the clients desired outcome.
+   
+Note that capturing clients demands is quite subjective and cannot be used as a parameter for spatial analysis
+
+The following are possible parameters that need consideration
+
+1. Entry point
+ a - from living room
+   b -from hallway
+   
+2. presence of balconies
+
+
+
 2. When you insert the project ID,it should tell you automatically if the project is in the database or not.
 
